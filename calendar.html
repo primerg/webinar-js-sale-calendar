@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" media="print" href="css/print.css">
+
+	<link rel='stylesheet' href='lib/fullcalendar/fullcalendar.css' />
+	<script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js'></script>
+	<script src='lib/fullcalendar/fullcalendar.js'></script>
+	
+	<script src="lib/jquery-ticker/jquery.newsTicker.js"></script>
+
+</head>
+<body>
+
+<!-- HEADER-AREA-START -->
+<header class="header-area">
+	<div class="container">
+		<!-- HEADER-CONTENT START-->
+		<div class="header-content">
+			<div class="logo pull-left" id="fix-logo">
+				<a href="index.html">
+					<img src="img/logo.png" alt="" class="logo-defoult">
+				</a>
+			</div>
+
+			<div class="user-menu pull-right" id="fix-user-menu">
+				<ul class="list-inline">
+					<li><a href="create-account.html">My Account</a></li>
+					<li><a href="checkout.html">Checkout</a></li>
+					<li><a href="checkout.html">Log In</a></li>
+					<li><a href="checkout.html">Cart: <span class="cart-item">0</span> items</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- HEADER-CONTENT END-->
+	</div>
+</header>
+
+<!-- MAIN-MENU-AREA-START -->
+<nav class="main-menu-area" id="sticker">
+	<div class="container">
+			<a class="mobile-menu hidden-md hidden-lg" href="#nav">MENU <span>&#9776</span></a>
+
+			<ul class="list-inline">
+				<li><a href="index.html">Home One</a></li>
+				<li><a href="index-2.html">Home Two</a></li>
+				<li><a href="index-3.html">Home Three</a></li>
+				<li><a href="index-4.html">Home Four</a></li>
+				<li><a href="index-5.html">Home Five</a></li>
+				<li><a href="index-6.html">Home Six</a></li>
+				<li><a href="index-7.html">Home Seven</a></li>
+			</ul>
+
+			
+	</div>
+</nav>
+
+<!-- MAIN-MENU-AREA-START -->
+<section>
+	<div class="container">
+		<div class="row">
+			<br/>
+			<ul class="newsticker">
+			    <li>Etiam imperdiet volutpat libero eu tristique.</li>
+			    <li>Curabitur porttitor ante eget hendrerit adipiscing.</li>
+			    <li>Praesent ornare nisl lorem, ut condimentum lectus gravida ut.</li>
+			    <li>Nunc ultrices tortor eu massa placerat posuere.</li>
+			</ul>
+
+			<div id='calendar'></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</section>
+
+<!-- FOOTER-AREA-START -->
+<footer>
+	<div class="container">
+		<div class="col col-md-4">
+			<div class="single-footer-menu">
+				<div class="footer-title">
+					<h2>Company Info</h2>
+				</div>
+				<div class="footer-menu">
+					<ul class="list-unstyled">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">terms of use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms and Conditions</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col col-md-4">
+			<div class="single-footer-menu">
+				<div class="footer-title">
+					<h2>CUSTOMER SERVICE</h2>
+				</div>
+				<div class="footer-menu">
+					<ul class="list-unstyled">
+						<li><a href="#">shipping policy</a></li>
+						<li><a href="#">Compensation Fist</a></li>
+						<li><a href="#">My Account</a></li>
+						<li><a href="#">Return Policy</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+	        events: [
+		        {
+		            title  : 'Sale Event 1',
+		            start  : '2016-02-14'
+		        },
+		        {
+		            title  : 'Sale Event 2',
+		            start  : '2016-02-17',
+		            end    : '2016-02-19'
+		        },
+		        {
+		            title  : 'event3',
+		            start  : '2016-02-09T12:30:00',
+		            allDay : false,
+		            color: 'red',
+		        }
+	    	]
+	    })
+
+	    $('.newsticker').newsTicker({
+	    	max_rows: 1,
+	    	row_height: 28
+	    });
+	    
+	});
+</script>
+
+</body>
+</html>
